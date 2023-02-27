@@ -80,8 +80,5 @@ after_success:
 deploy:
 - provider: script
   script: "$TRAVIS_BUILD_DIR/deploy-prod.new.sh $TRAVIS_TAG"
-  'on':
-    branch:
-    - master
     condition:
     - $TRAVIS_EVENT_TYPE == "push"
